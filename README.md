@@ -1,9 +1,5 @@
 # Java-Algorithm
-BaekjoonAlgorithm
-Programmers
 
-```
- git push
-  - git push -u origin main
- 리모트 확인
-  - git remote
+BaekjoonAlgorithm, Programmers으로 알고리즘 공부하자!
+
+[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=djaakclsrn12)](https://solved.ac/djaakclsrn12/)
