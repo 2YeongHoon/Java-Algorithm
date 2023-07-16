@@ -1,0 +1,13 @@
+class Solution {
+    public int solution(int a, int b) {
+        String aStr = Integer.toString(a);
+        String bStr = Integer.toString(b);
+        int aFirst = Integer.parseInt(aStr + bStr);
+        int bFirst = Integer.parseInt(bStr + aStr);
+        
+        if( aFirst < bFirst ){
+            return bFirst;
+        }
+        return aFirst;
+    }
+}
