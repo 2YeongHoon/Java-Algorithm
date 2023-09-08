@@ -1,0 +1,10 @@
+class Solution {
+    public int solution(int a, int b) {
+        int aa = Integer.parseInt(Integer.toString(a) + Integer.toString(b));
+        int bb = 2 * a * b;
+        if( aa > bb ){
+            return aa;
+        }
+        return bb;
+    }
+}
