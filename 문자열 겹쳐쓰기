@@ -1,1 +1,13 @@
 
+class Solution {
+    public String solution(String my_string, String overwrite_string, int s) {
+        String[] my_string_arr = my_string.split("");
+        String[] overwrite_string_arr = overwrite_string.split("");
+        
+        for(int i = s; i < overwrite_string_arr.length + s; i++){
+            my_string_arr[i] = overwrite_string_arr[i - s];
+        }
+        
+        return String.join("", my_string_arr);
+    }
+}
