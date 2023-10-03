@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+import java.util.List;
+
+class Solution {
+    public int[] solution(String[] name, int[] yearning, String[][] photo) {
+       List<Integer> answer = new ArrayList<>();
+
+    for(String[] photos: photo){
+      int count = 0;
+      for(String photoName: photos){
+        count = count + findYearning(photoName, yearning, name);
+      }
+      answer.add(count);
+    }
+
+    return answer.stream()
+        .mapToInt(Integer::intValue)
+        .toArray();
+  }
+
+  private int findYearning(String photoName, int[] yearning, String[] names){
+    for(int i = 0; i < names.length; i++){
+      if(names[i].equals(photoName)){
+        return yearning[i];
+      }
+    }
+    return 0;
+  }
+}
