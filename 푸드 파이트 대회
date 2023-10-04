@@ -1,0 +1,26 @@
+class Solution {
+    public String solution(int[] food) {
+   String before = "";
+    String after = "";
+
+    for (int i = 1; i < food.length; i++){
+      if(food[i] >= 2){
+        after = after + word(i, food[i]);
+      }
+    }
+    StringBuffer sb = new StringBuffer(after);
+    String reversedStr = sb.reverse().toString();
+    after += "0";
+    after += reversedStr;
+    return after;
+  }
+
+  private String word(int i, int repeat){
+    String add2 = "";
+    for(int j = 0; j < repeat / 2 ; j++) {
+      add2 = add2 + Integer.toString(i);
+    }
+    return add2;
+  }
+
+}
