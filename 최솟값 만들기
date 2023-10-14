@@ -1,0 +1,16 @@
+class Solution
+{
+    public int solution(int []A, int []B)
+    {
+        Integer answer = 0;
+        int size = A.length;
+        Arrays.sort(A);
+        Arrays.sort(B);
+        
+        for(var i = 0; i < size; i++){
+            answer += A[i] * B[size - i - 1];
+        }
+
+        return answer;
+    }
+}
