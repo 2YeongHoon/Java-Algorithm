@@ -1,0 +1,30 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] arr) {
+        Arrays.sort(arr);
+        int tmp = calcLcm(arr[0], arr[1]);
+        
+        for(int i = 2; i < arr.length; i++){
+            tmp = calcLcm(arr[i], tmp);
+        }
+        
+        return tmp;
+    }
+    
+    private int calcLcm(int num1, int num2) {
+        int a = 1;
+        int b = 1;
+        for (; ; ) {
+            if (num1 * a == num2 * b) {
+                return num1 * a;
+            } 
+
+            if (num1 * a < num2 * b) {
+                a++;
+            } else {
+                b++;
+            }
+        }   
+    }
+}
