@@ -1,0 +1,23 @@
+class Solution {
+    public int solution(int[] numList) {
+        return numList.length > 10 ? plus(numList): multiply(numList);
+    }
+    
+    private int plus(int[] numList){
+        int answer = 0;
+        for(var num : numList){
+            answer += num;
+        }
+        
+        return answer;
+    }
+    
+    private int multiply(int[] numList){
+        int answer = 1;
+        for(var num : numList){
+            answer *= num;
+        }
+        
+        return answer;
+    }
+}
