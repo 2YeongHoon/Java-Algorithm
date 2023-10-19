@@ -1,0 +1,14 @@
+import java.util.*;
+
+class Solution {
+    public String[] solution(String[] players, String[] callings) {
+        for (String calling : callings) {
+            int idx = Arrays.asList(players).indexOf(calling);
+            String temp = players[idx - 1];
+            players[idx-1] = players[idx];
+            players[idx] = temp;
+        }
+
+        return players;
+    }
+}
