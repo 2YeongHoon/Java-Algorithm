@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(String[] babbling) {
+        int answer = 0;
+        String[] speakableWords = {"aya", "ye", "woo", "ma"};
+        
+        for(String word : babbling) {
+            for(String speakableWord : speakableWords) {
+                word = word.replace(speakableWord, " ");
+            }
+            if(word.replaceAll(" ", "").equals("")) {
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
