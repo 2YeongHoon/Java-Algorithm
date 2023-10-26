@@ -1,0 +1,21 @@
+class Solution {
+    public int[] solution(String s) {
+        char[] charArr = s.toCharArray();
+        int[] answer = new int[charArr.length];
+        answer[0] = -1;
+        
+        for(var i = 1; i < charArr.length; i++){
+            int tmp = -1;
+            
+            for(var j = i - 1; j >= 0; j--){
+                if(charArr[i] == charArr[j]){
+                    tmp = i - j;
+                    break;
+                }
+            }
+            
+            answer[i] = tmp;
+        }
+        return answer;
+    }
+}
