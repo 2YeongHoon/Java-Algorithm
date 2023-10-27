@@ -1,0 +1,22 @@
+class Solution {
+    public int solution(int[] dot) {
+        return calcQuadrant(dot[0], dot[1]);
+    }
+    
+    private int calcQuadrant(int x, int y) {
+
+        if(x < 0 && y > 0){
+            return 2;
+        }
+        
+        if(x < 0 && y < 0){
+            return 3;
+        }
+        
+        if(x > 0 && y < 0){
+            return 4;
+        }
+        
+        return 1;
+    }
+}
