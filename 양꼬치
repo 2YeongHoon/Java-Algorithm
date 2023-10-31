@@ -1,0 +1,11 @@
+class Solution {
+    private static final int YANGGOGI_PRICE = 12000;
+    private static final int BEVERAGE_PRICE = 2000;
+    
+    public int solution(int n, int k) {
+        int service = n / 10;
+        int yanggogi = YANGGOGI_PRICE * n;
+        int beverage = BEVERAGE_PRICE * (k- service);
+        return yanggogi + beverage;
+    }
+}
