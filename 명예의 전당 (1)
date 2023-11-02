@@ -1,0 +1,22 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int k, int[] score) {
+        List<Integer> tmp = new ArrayList<>();
+        List<Integer> answer = new ArrayList<>();
+
+        for (var num : score) {
+            tmp.add(num);
+            Collections.sort(tmp, Collections.reverseOrder());
+            if (tmp.size() >= k) {
+                answer.add(tmp.get(k - 1));
+            } else {
+                answer.add(tmp.get(tmp.size() - 1));
+            }
+        }
+        
+        return answer.stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
+    }
+}
