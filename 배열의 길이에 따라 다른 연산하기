@@ -1,0 +1,24 @@
+class Solution {
+    public int[] solution(int[] arr, int n) {
+        int size = arr.length;
+        boolean isOdd = isOdd(size);
+        
+        for(int i = 0; i < size; i++){
+            if(isOdd){
+                if(i % 2 == 1){
+                    arr[i] = arr[i] + n;
+                }
+            }else{
+                if(i % 2 == 0){
+                    arr[i] = arr[i] + n;
+                }
+            }
+
+        }
+        return arr;
+    }
+    
+    private boolean isOdd(int size){
+        return size % 2 == 0 ? true : false;
+    }
+}
