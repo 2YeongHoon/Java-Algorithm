@@ -1,0 +1,12 @@
+class Solution {
+    public int solution(int order) {
+        int answer = 0;
+        String[] orders = Integer.toString(order).split("");
+        for(var ord : orders){
+            if(ord.equals("3") || ord.equals("6") || ord.equals("9")){
+                answer++;
+            }
+        }
+        return answer;
+    }
+}
