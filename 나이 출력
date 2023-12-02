@@ -1,0 +1,6 @@
+class Solution {
+    public int solution(int age) {
+        final int NOW_YEAR = 2023;
+        return NOW_YEAR - age;
+    }
+}
