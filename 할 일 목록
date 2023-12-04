@@ -1,0 +1,15 @@
+import java.util.*;
+
+class Solution {
+    public String[] solution(String[] todo_list, boolean[] finished) {
+        List<String> answer = new ArrayList<>();
+        final int size = todo_list.length;
+        
+        for(int todoNum = 0; todoNum < size; todoNum++){
+            if(!finished[todoNum]){
+                answer.add(todo_list[todoNum]);
+            }
+        }
+        return answer.stream().toArray(String[]::new);
+    }
+}
