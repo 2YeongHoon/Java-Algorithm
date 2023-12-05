@@ -1,0 +1,14 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] numbers) {
+        int[] numbers2 = Arrays.stream(numbers)
+        .map(i -> -i)
+        .sorted()
+        .toArray();
+
+        int max = numbers2[0];
+        int secondMax = numbers2[1];
+        return max * secondMax;
+    }
+}
