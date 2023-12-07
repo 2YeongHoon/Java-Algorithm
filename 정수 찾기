@@ -1,0 +1,12 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] num_list, int n) {
+        final int result = Arrays.stream(num_list)
+            .filter(i -> i == n)
+            .findFirst()
+            .orElse(0);
+
+        return result == 0 ? 0 : 1;
+    }
+}
