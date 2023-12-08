@@ -1,0 +1,7 @@
+class Solution {
+    public int solution(int slice, int n) {
+        var pizzaCount = (n / slice);
+        var pizzaPiece = n % slice;
+        return pizzaPiece == 0 ? pizzaCount : pizzaCount + 1;
+    }
+}
