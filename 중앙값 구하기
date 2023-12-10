@@ -1,0 +1,12 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] array) {
+        final int size = array.length;
+        int[] sortedArray = Arrays.stream(array)
+            .sorted()
+            .toArray();
+        
+        return sortedArray[(size / 2)];
+    }
+}
