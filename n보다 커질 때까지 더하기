@@ -1,0 +1,13 @@
+class Solution {
+    public int solution(int[] numbers, int n) {
+        int answer = 0;
+        
+        for(var number : numbers){
+            answer += number;
+            if(n < answer){
+                return answer;
+            }
+        }
+        return 1;
+    }
+}
