@@ -1,0 +1,17 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] num_list, int n) {
+        List<Integer> answer = new ArrayList<>();
+        int i = 0;
+        for(var num : num_list){
+            if(i % n == 0){
+                answer.add(num);
+            }
+            i++;
+        }
+        return answer.stream()
+            .mapToInt(Integer::intValue)
+            .toArray();
+    }
+}
