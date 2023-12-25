@@ -1,0 +1,11 @@
+class Solution {
+    public String solution(String my_string, int[] index_list) {
+        String answer = "";
+         char[] arr = my_string.toCharArray();
+        
+        for(var index : index_list){
+            answer += arr[index];
+        }
+        return answer;
+    }
+}
