@@ -1,0 +1,15 @@
+import java.util.*;
+
+class Solution {
+    public int solution(int[] numbers) {
+        int[] nums = Arrays.stream(numbers)
+            .sorted()
+            .toArray();
+        int numsSize = numbers.length;
+
+        int num1 = nums[0] * nums[1];
+        int num2 = nums[numsSize -2] * nums[numsSize -1];
+        
+        return Math.max(num1, num2);
+    }
+}
