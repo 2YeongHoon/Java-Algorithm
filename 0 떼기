@@ -1,0 +1,7 @@
+class Solution {
+    public String solution(String str) {
+        final int excuteZero = Integer.parseInt(str);
+        
+        return Integer.toString(excuteZero);
+    }
+}
