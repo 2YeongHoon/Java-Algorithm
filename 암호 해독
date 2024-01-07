@@ -1,0 +1,13 @@
+class Solution {
+    public String solution(String cipher, int code) {
+        String[] cipherStrings = cipher.split("");
+        String answer = "";
+
+        for(int i = 0; i < cipherStrings.length ;i++){
+            if((i + 1) % code == 0){
+                answer += cipherStrings[i];
+            }
+        }
+        return answer;
+    }
+}
