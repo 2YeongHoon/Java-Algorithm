@@ -1,0 +1,11 @@
+import java.util.*;
+
+class Solution {
+    public int solution(String numStr) {
+        String[] numList = numStr.split("");
+        
+        return Arrays.stream(numList)
+            .map(Integer::parseInt)
+            .reduce(0, Integer::sum);
+    }
+}
