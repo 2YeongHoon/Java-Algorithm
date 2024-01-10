@@ -1,0 +1,13 @@
+class Solution {
+    public int solution(String myString, String isPrefix) {
+        final int strSize = isPrefix.length();
+        
+        if(strSize > myString.length()){
+            return 0;
+        }
+        
+        final String str = myString.substring(0, strSize);
+        
+        return str.equals(isPrefix) ? 1 : 0;
+    }
+}
