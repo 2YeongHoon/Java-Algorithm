@@ -1,0 +1,16 @@
+class Solution {
+    public int solution(String binomial) {
+        String[] splitArr = binomial.split(" "); 
+        Integer firstNum = Integer.valueOf(splitArr[0]);
+        Integer secondNum = Integer.valueOf(splitArr[2]);
+        String op = splitArr[1];
+        
+        if (op.equals("+")) {
+            return firstNum + secondNum;
+        } else if (op.equals("-")) {
+            return firstNum - secondNum;
+        } else {
+            return firstNum * secondNum;
+        }
+    }
+}
