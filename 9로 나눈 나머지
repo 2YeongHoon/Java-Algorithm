@@ -1,0 +1,13 @@
+import java.util.*;
+
+class Solution {
+    public int solution(String number) {
+        final int divided = 9;
+        
+        int answer = Arrays.stream(number.split(""))
+            .mapToInt(Integer::parseInt)
+            .sum();
+
+        return answer % divided; 
+    }
+}
