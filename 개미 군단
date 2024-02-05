@@ -1,0 +1,11 @@
+class Solution {
+    public int solution(int hp) {
+        int generalAnt = hp / 5;
+        int generalMod = hp % 5;
+        
+        int soldierAnt = generalMod / 3;
+        int soldierMod = generalMod % 3;
+        
+        return generalAnt + soldierAnt + soldierMod;
+    }
+}
