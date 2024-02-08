@@ -1,0 +1,19 @@
+import java.util.Arrays;
+
+class Solution {
+    
+    private final int AMERICANO_OR_DEFAULT = 4500;
+    private final int LATTE = 5000;
+    
+    public int solution(String[] order) {
+        return Arrays.stream(order)
+            .mapToInt(this::beveragePrice)
+            .sum();
+    }
+    
+    private int beveragePrice(String beverage) {
+        if(beverage.contains("latte")) return LATTE;
+        return AMERICANO_OR_DEFAULT;
+  }
+
+}
