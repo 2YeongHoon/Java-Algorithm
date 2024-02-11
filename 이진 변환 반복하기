@@ -1,0 +1,20 @@
+class Solution {
+    public int[] solution(String str) {
+	    int[] answer = new int[2];
+ 
+        while(str.length() > 1) {
+            int countOne = 0;
+            for(var i = 0; i < str.length(); i++) {
+                if(str.charAt(i) == '0'){
+                    answer[1]++;
+                }else{
+                    countOne++;
+                }  
+            }
+ 
+            str = Integer.toBinaryString(countOne);
+            answer[0]++;
+        }
+        return answer;
+    }
+}
